@@ -18,7 +18,9 @@ public class Triangle {
     }
 
     public void doubleSize(){
-        throw new RuntimeException("Not Implemented");
+        side1 = side1 * Math.sqrt(2);
+        side2 = side2 * Math.sqrt(2);
+        side3 = side3 * Math.sqrt(2);
     }
 
     public double longestLineWithin(){
