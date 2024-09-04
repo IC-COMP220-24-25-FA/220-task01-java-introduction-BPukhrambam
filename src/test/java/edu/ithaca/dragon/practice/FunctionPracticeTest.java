@@ -1,5 +1,6 @@
 package edu.ithaca.dragon.practice;
 
+import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -78,6 +79,20 @@ public class FunctionPracticeTest {
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(2, -3, false));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-2, -3, true));
 
+    }
+
+    @Test
+    public void findFirstLargestTest() {
+        List<Integer> testList = new ArrayList<Integer>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(testList));
+        testList.add(3);
+        assertEquals(0, FunctionPractice.findFirstLargest(testList));
+        testList.add(2);
+        assertEquals(0, FunctionPractice.findFirstLargest(testList));
+        testList.add(3);
+        assertEquals(0, FunctionPractice.findFirstLargest(testList));
+        testList.add(5);
+        assertEquals(3, FunctionPractice.findFirstLargest(testList));
     }
 
 }
