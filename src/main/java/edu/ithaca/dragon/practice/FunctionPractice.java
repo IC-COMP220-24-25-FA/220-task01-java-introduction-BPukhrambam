@@ -40,7 +40,15 @@ public class FunctionPractice {
      *         today
      */
     public static boolean isGoodDog(int yearsOld, int daysSinceShoesChewed, boolean fetchedThePaperToday) {
-        throw new RuntimeException("Not Implemented");
+        if (yearsOld > 0 && daysSinceShoesChewed > 0) {
+            if (daysSinceShoesChewed > 3 && fetchedThePaperToday == true) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            throw new IllegalArgumentException("Year or Age cannot be negative");
+        }
     }
 
     /**
