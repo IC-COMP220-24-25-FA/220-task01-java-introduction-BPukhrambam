@@ -78,7 +78,17 @@ public class FunctionPractice {
      *         last occurence.
      */
     public static int findLastLargest(List<Integer> numbers) {
-        throw new RuntimeException("Not Implemented");
+        if (numbers.size() > 0) {
+            int maxIndex = 0;
+            for (int i = 0; i < numbers.size(); i++) {
+                if (numbers.get(maxIndex) <= numbers.get(i)) {
+                    maxIndex = i;
+                }
+            }
+            return maxIndex;
+        } else {
+            return -1;
+        }
     }
 
     /**
