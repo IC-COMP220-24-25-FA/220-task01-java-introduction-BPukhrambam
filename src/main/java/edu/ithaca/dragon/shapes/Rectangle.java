@@ -9,6 +9,10 @@ public class Rectangle implements Shape {
         this.width = width;
     }
 
+    public String toString() {
+        return "Rectangle with length " + this.length + "and width " + this.width;
+    }
+
     public double calcArea() {
         return this.length * this.width;
     }

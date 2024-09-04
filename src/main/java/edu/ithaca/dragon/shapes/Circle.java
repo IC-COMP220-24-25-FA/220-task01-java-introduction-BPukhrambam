@@ -10,6 +10,10 @@ public class Circle implements Shape {
         this.radius = radius;
     }
 
+    public String toString() {
+        return "Cricle with radius " + this.radius;
+    }
+
     /**
      * @return the area of this circle
      */

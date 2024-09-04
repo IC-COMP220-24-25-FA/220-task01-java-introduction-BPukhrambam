@@ -15,6 +15,10 @@ public class Triangle implements Shape {
 
     }
 
+    public String toString() {
+        return "Triangle with sides " + this.side1 + ", " + this.side2 + ", " + this.side3;
+    }
+
     public double calcArea() {
         double semiPerimeter = (side1 + side2 + side3) / 2;
         double area = Math
