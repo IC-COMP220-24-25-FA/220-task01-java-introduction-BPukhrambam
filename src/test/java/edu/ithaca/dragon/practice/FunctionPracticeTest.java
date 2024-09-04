@@ -4,6 +4,7 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -107,6 +108,20 @@ public class FunctionPracticeTest {
         assertEquals(2, FunctionPractice.findLastLargest(testList));
         testList.add(5);
         assertEquals(3, FunctionPractice.findLastLargest(testList));
+    }
+
+    @Test
+    public void findFirstMostOccurencesOfLetterTest() {
+        List<String> testList = new ArrayList<String>();
+        assertThrows(IllegalArgumentException.class,
+                () -> FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'a'));
+        testList.add("Impossible");
+        assertEquals("Impossible", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 's'));
+        testList.add("Highlander");
+        assertEquals("Highlander", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'h'));
+        testList.add("Impossibles");
+        assertEquals("Impossibles", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 's'));
+        assertEquals("Char not present", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'u'));
     }
 
 }
