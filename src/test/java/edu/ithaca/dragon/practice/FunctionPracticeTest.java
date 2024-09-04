@@ -68,4 +68,16 @@ public class FunctionPracticeTest {
 
     }
 
+    @Test
+    public void isGoodDogTest() {
+        assertTrue(FunctionPractice.isGoodDog(10, 4, true));
+        assertFalse(FunctionPractice.isGoodDog(5, 2, true));
+        assertFalse(FunctionPractice.isGoodDog(5, 2, false));
+
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-2, 3, true));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(2, -3, false));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-2, -3, true));
+
+    }
+
 }
