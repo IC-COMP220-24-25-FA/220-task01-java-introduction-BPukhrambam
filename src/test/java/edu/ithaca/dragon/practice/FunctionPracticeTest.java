@@ -59,6 +59,7 @@ public class FunctionPracticeTest {
     public void calcSalePriceTest() {
         assertEquals(85, FunctionPractice.calcSalePrice(100, 20, 5));
         assertEquals(950, FunctionPractice.calcSalePrice(1000, 10, 50));
+
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(1000, 200, 50));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-10, 200, 50));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(100, -20, 50));

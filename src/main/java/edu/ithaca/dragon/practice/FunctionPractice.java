@@ -28,7 +28,11 @@ public class FunctionPractice {
      *         applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax) {
-        throw new RuntimeException("Not Implemented");
+        if (originalPrice > 0 && discountPercent > 0 && discountPercent <= 100 && salesTax > 0) {
+            return originalPrice - (originalPrice * discountPercent) / 100 + salesTax;
+        } else {
+            throw new IllegalArgumentException("Check values");
+        }
     }
 
     /**
